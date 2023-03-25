@@ -1,5 +1,6 @@
-import createHandler from "@/lib/handler/create-handler";
 import { Configuration, OpenAIApi } from "openai";
+
+import createHandler from "@/lib/handler/create-handler";
 
 const token = process.env.LOCAL_OPEN_AI_TOKEN;
 
@@ -11,6 +12,7 @@ const generatePrompt = (
   article,
   n
 ) => `Generate ${n} questions based on the following article
+---
 ${article}
 `;
 
